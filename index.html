@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Library of Ruina - Canciónes de Mili</title>
+    <link rel="stylesheet" href="css/css.css">
+</head>
+<body>
+    <!-- Checkbox oculto para el toggle -->
+    <!-- Cuando está unchecked (desmarcado): Se ve la pantalla de entrada con el fondo de la biblioteca. 
+         Sirve para que se vea la imagen antes que la página web-->
+    <input type="checkbox" id="selector-entrada">
+
+    <!-- Checkboxes para modales al nivel de body -->
+    <input type="checkbox" id="modal-1" class="selector-modal">
+    <input type="checkbox" id="modal-2" class="selector-modal">
+    <input type="checkbox" id="modal-3" class="selector-modal">
+    <input type="checkbox" id="modal-4" class="selector-modal">
+    <input type="checkbox" id="modal-5" class="selector-modal">
+    <input type="checkbox" id="modal-6" class="selector-modal">
+    <!-- modal-1 → Abre video de "String Theocracy"
+        modal-2 → Abre video de "Love Town"
+        modal-3 → Abre video de "Silence Eternal"
+        modal-4 → Abre video de "Iron Lotus"
+        modal-5 → Abre video de "Children of the City"
+        modal-6 → Abre video de "Gone Angels" -->
+
+    <!-- Esos checkboxes son interruptores invisibles que controlan cuándo se abren y se cierran
+      los modales, que son (ventanas emergentes con los videos). Ya que para que salieran los videos como queria,
+      era necesario javaScript pero no tengo conocimientos sobre eso. -->
+    
+    <!-- PANTALLA DE ENTRADA -->
+    <label for="selector-entrada" class="pantalla-entrada">
+        <div class="texto-entrada">
+            <h1>LIBRARY OF RUINA</h1>
+            <p>Click para entrar...</p>
+            <!-- Audio que se reproduce al hacer click pregunta 
+                 también a la IA como hacerlo, después de pruebas solo
+                 se reproduce una vez, 'creo' pero bueno lo voy a dejar
+                 la primera vez me asuste, sono muy fuerte -->
+            <audio autoplay>
+                <source src="vfx/Snap.mp3" type="audio/mp3">
+            </audio>
+        </div>
+    </label>
+
+    <!-- Preguntando a la IA como hacer que aparezcan imágenes flotantes, 
+         me dio esto, y emojis-->
+    <div class="paginas-flotantes">
+        <div class="pagina-flotante">📖</div>
+        <div class="pagina-flotante">📕</div>
+        <div class="pagina-flotante">📗</div>
+        <div class="pagina-flotante">📙</div>
+        <div class="pagina-flotante">📓</div>
+        <div class="pagina-flotante">✧</div>
+        <div class="pagina-flotante">℘</div>
+        <div class="pagina-flotante">✦</div>
+        <div class="pagina-flotante">📖</div>
+        <div class="pagina-flotante">📕</div>
+        <div class="pagina-flotante">📗</div>
+        <div class="pagina-flotante">📙</div>
+        <div class="pagina-flotante">📓</div>
+        <div class="pagina-flotante">✧</div>
+        <div class="pagina-flotante">℘</div>
+    </div>
+
+    <!-- PÁGINA PRINCIPAL -->
+    <header class="contenido-principal">
+        <div class="encabezado">
+            <div class="titulo-encabezado">
+                <div class="logo-mili"><img src="images/Mili_Logo.png" alt="Mili Logo"></div>
+                <h1>CANCIÓNES DE MILI</h1>
+                <div class="logo-mili"><img src="images/Mili_Logo.png" alt="Mili Logo"></div>
+            </div>
+            <p>Los Bosses que cuentan con una banda sonora vocal</p>
+        </div>
+    </header>
+
+    <main>
+        <nav class="contenedor-bosses">
+            <!-- String Theocracy -->
+            <div class="envoltorio-tarjeta-boss">
+                <label for="modal-1" class="tarjeta-boss">
+                    <div class="icono-boss">🎻</div>
+                    <div class="nombre-boss">String Theocracy</div>
+                    <div class="titulo-boss">Teocracia de Cuerdas</div>
+                    <div class="descripcion-boss">Un régimen donde cada movimiento está controlado, donde los hilos invisibles tiran de toda la realidad. La música que da paso al inicio de esta historia.</div>
+                    <div class="cancion-boss">
+                        <p>🎵 Canción Mili:</p>
+                        <span>Teocracia de Cuerdas (String Theocracy)</span>
+                    </div>
+                </label>
+                <label for="modal-1" class="boton-cancion">Ver canción</label>
+            </div>
+
+            <!-- Love Town -->
+            <div class="envoltorio-tarjeta-boss">
+                <label for="modal-2" class="tarjeta-boss">
+                    <div class="icono-boss">💕</div>
+                    <div class="nombre-boss">Love Town</div>
+                    <div class="titulo-boss">Desde un Lugar de Amor</div>
+                    <div class="descripcion-boss">Donde cada acción viene del corazón, pero el corazón está quebrado. Un lugar que promete amor pero solo entrega ruina y desolación.</div>
+                    <div class="cancion-boss">
+                        <p>🎵 Canción Mili:</p>
+                        <span>Desde un lugar de amor</span>
+                    </div>
+                </label>
+                <label for="modal-2" class="boton-cancion">Ver canción</label>
+            </div>
+
+            <!-- And Then is Heard No More -->
+            <div class="envoltorio-tarjeta-boss">
+                <label for="modal-3" class="tarjeta-boss">
+                    <div class="icono-boss">🔇</div>
+                    <div class="nombre-boss">Heard No More</div>
+                    <div class="titulo-boss">Y Luego No Se Escucha Más</div>
+                    <div class="descripcion-boss">El silencio final, donde toda voz es acallada, donde los ecos se desvanecen en la nada, y la vista permanece nublada. El fin de toda melodía.</div>
+                    <div class="cancion-boss">
+                        <p>🎵 Canción Mili:</p>
+                        <span>And Then is Heard No More</span>
+                    </div>
+                </label>
+                <label for="modal-3" class="boton-cancion">Ver canción</label>
+            </div>
+
+            <!-- Iron Lotus -->
+            <div class="envoltorio-tarjeta-boss">
+                <label for="modal-4" class="tarjeta-boss">
+                    <div class="icono-boss">🪷</div>
+                    <div class="nombre-boss">Iron Lotus</div>
+                    <div class="titulo-boss">Flor de Hierro</div>
+                    <div class="descripcion-boss">Belleza forjada en acero, una flor que no puede marchitarse porque nunca estuvo viva. Rigidez perfecta, perfección sin vida.</div>
+                    <div class="cancion-boss">
+                        <p>🎵 Canción Mili:</p>
+                        <span>Iron Lotus</span>
+                    </div>
+                </label>
+                <label for="modal-4" class="boton-cancion">Ver canción</label>
+            </div>
+
+            <!-- Children of the City -->
+            <div class="envoltorio-tarjeta-boss">
+                <label for="modal-5" class="tarjeta-boss">
+                    <div class="icono-boss">🏙️</div>
+                    <div class="nombre-boss">Children of the City</div>
+                    <div class="titulo-boss">Hijos de la Ciudad</div>
+                    <div class="descripcion-boss">Nacidos con su final ya escrito, estos niños nunca conocieron la verdadera naturaleza. La ciudad es su única realidad.</div>
+                    <div class="cancion-boss">
+                        <p>🎵 Canción Mili:</p>
+                        <span>Children of the City</span>
+                    </div>
+                </label>
+                <label for="modal-5" class="boton-cancion">Ver canción</label>
+            </div>
+
+            <!-- Gone Angels -->
+            <div class="envoltorio-tarjeta-boss">
+                <label for="modal-6" class="tarjeta-boss">
+                    <div class="icono-boss">👼</div>
+                    <div class="nombre-boss">Gone Angels</div>
+                    <div class="titulo-boss">Ángeles Desaparecidos</div>
+                    <div class="descripcion-boss">La culminación de la venganza y duelo del protragonista, con sus gritos de ira y dolor desde la perspectiva de Roland (el prota) hacia el origen de la fuente de su dolor *Mi parte y canción favorita*</div>
+                    <div class="cancion-boss">
+                        <p>🎵 Canción Mili:</p>
+                        <span>Gone Angels</span>
+                    </div>
+                </label>
+                <label for="modal-6" class="boton-cancion">Ver canción</label>
+            </div>
+        </nav>
+    </main>
+
+    <!-- MODALES -->
+    <!-- Modal 1 - String Theocracy -->
+    <!-- Aquí están los modales con las canciónes que serian los substitutos al javascript. -->
+    <div class="modal" id="modal-1-contenido">
+        <label for="modal-1" class="superposicion-modal"></label>
+        <div class="contenido-modal">
+            <!-- El &times, representa la X en las páginas web, que en este caso la usamos para cerrar el modal (el vídeo) -->
+            <label for="modal-1" class="cerrar-modal">&times;</label>
+            <iframe width="100%" height="600" src="https://www.youtube.com/embed/nOj_A3aZxGs" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+    </div>
+
+    <!-- Modal 2 - Love Town -->
+    <div class="modal" id="modal-2-contenido">
+        <label for="modal-2" class="superposicion-modal"></label>
+        <div class="contenido-modal">
+            <label for="modal-2" class="cerrar-modal">&times;</label>
+            <iframe width="100%" height="600" src="https://www.youtube.com/embed/xyx8DMlUAQ4" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+    </div>
+
+    <!-- Modal 3 - And Then is Heard No More -->
+    <div class="modal" id="modal-3-contenido">
+        <label for="modal-3" class="superposicion-modal"></label>
+        <div class="contenido-modal">
+            <label for="modal-3" class="cerrar-modal">&times;</label>
+            <iframe width="100%" height="600" src="https://www.youtube.com/embed/lclt459JpVQ" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+    </div>
+
+    <!-- Modal 4 - Iron Lotus -->
+    <div class="modal" id="modal-4-contenido">
+        <label for="modal-4" class="superposicion-modal"></label>
+        <div class="contenido-modal">
+            <label for="modal-4" class="cerrar-modal">&times;</label>
+            <iframe width="100%" height="600" src="https://www.youtube.com/embed/LxduFWbbndE" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+    </div>
+
+    <!-- Modal 5 - Children of the City -->
+    <div class="modal" id="modal-5-contenido">
+        <label for="modal-5" class="superposicion-modal"></label>
+        <div class="contenido-modal">
+            <label for="modal-5" class="cerrar-modal">&times;</label>
+            <iframe width="100%" height="600" src="https://www.youtube.com/embed/aHUVqV5CO6w" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+    </div>
+
+    <!-- Modal 6 - Gone Angels -->
+    <div class="modal" id="modal-6-contenido">
+        <label for="modal-6" class="superposicion-modal"></label>
+        <div class="contenido-modal">
+            <label for="modal-6" class="cerrar-modal">&times;</label>
+            <iframe width="100%" height="600" src="https://www.youtube.com/embed/D_qiWvjJ3kk" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+    </div>
+
+    <footer class="pie-pagina">
+        <p>Una Página Temática de Library of Ruina • Project Moon • Kim Ji-hoon</p>
+        <p>Música por <a href="#">Mili</a> • Juego por <a href="#">Project Moon</a></p>
+    </footer>
+</body>
+</html>
