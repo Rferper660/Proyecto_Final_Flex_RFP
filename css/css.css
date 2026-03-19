@@ -40,6 +40,7 @@ body {
     background-size: cover;
     background-position: center;
     display: flex;
+    flex-wrap: wrap;
     align-items: center;
     justify-content: center;
     z-index: 1000;          /* Aparece encima de todo */
@@ -73,10 +74,10 @@ body {
 
 /* TEXTO ENTRADA */
 .texto-entrada {
-    display: flex;
-    flex-direction: column;
+    display: grid;
+    grid-template-columns: 1fr;
     align-items: center;
-    justify-content: center;
+    justify-items: center;
     gap: 15px;
     z-index: 2;         /* Está encima del overlay oscuro */
     text-align: center;
@@ -150,9 +151,10 @@ header {
     width: 100%;
 }
 
-/* Flex para ordenar título y logos horizontalmente */
+/* Flex para ordenar título y logos horizontalmente, ahora es grid */
 .titulo-encabezado {
-    display: flex;
+    display: grid;
+    grid-template-columns: auto auto auto;
     align-items: center;
     justify-content: center;
     gap: 30px; /* Espacio entre elementos */
@@ -178,10 +180,9 @@ header p {
 .logo-mili {
     width: 80px;
     height: 80px;
-    display: flex;
+    display: grid;
     align-items: center;
-    justify-content: center;
-    flex-shrink: 0;
+    justify-items: center;
 }
 
 .logo-mili img {
@@ -199,19 +200,19 @@ header p {
 /* TARJETAS DE LOS BOSSES CON LAS CANCIONES */
 /* Contenedor que ordena las 6 tarjetas */
 .contenedor-bosses {
-    display: flex;          /* Las ordena en fila */
-    flex-wrap: wrap;        /* Se ajustan al ancho */
-    gap: 40px;              /* Espacio entre tarjetas */
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 40px;
     max-width: 1400px;
     margin: 0 auto;
-    justify-content: center;
-    align-items: stretch;   /* Todas igual altura */
+    justify-items: center;
+    align-items: stretch;
 }
 
 /* Envoltorio de la tarjeta con botón */
 .envoltorio-tarjeta-boss {
-    display: flex;
-    flex-direction: column;
+    display: grid;
+    grid-template-rows: 1fr auto;
     min-height: 550px;
 }
 
@@ -220,16 +221,15 @@ header p {
     background: linear-gradient(135deg, #1a1a1a 0%, #2a1a0a 100%);
     border: 2px solid var(--oro);
     padding: 30px;
-    width: 280px;
-    display: flex;
-    flex-direction: column;
+    width: 350px;
+    display: grid;
+    grid-template-columns: 1fr;
     cursor: pointer;
     transition: all 0.4s ease-out;
     box-shadow: 0 0 20px rgba(212, 175, 55, 0.1);
     animation: entrada-tarjeta 0.8s ease-out 0.7s both;
     overflow: hidden;
     border-radius: 5px;
-    flex: 1;
 }
 
 /* Animación de entrada de las tarjetas */
@@ -253,6 +253,7 @@ header p {
     border-radius: 10px;
     margin: 0 auto 20px;
     display: flex;
+    flex-wrap: wrap;
     align-items: center;
     justify-content: center;
     font-size: 2.5em;
@@ -431,6 +432,7 @@ el detalle que queria */
 #modal-5:checked ~ #modal-5-contenido,
 #modal-6:checked ~ #modal-6-contenido {
     display: flex;   /* Se ve */
+    flex-wrap: wrap;
     opacity: 1;
     visibility: visible;
     align-items: center;
@@ -487,7 +489,7 @@ iframe {
     main { padding: 80px 40px 80px; }
     .titulo-encabezado { gap: 15px; }
     .logo-mili { width: 60px; height: 60px; }
-    .contenedor-bosses { gap: 20px; flex-direction: column; align-items: center; }
+    .contenedor-bosses { gap: 20px; }
     .tarjeta-boss { width: 100%; max-width: 320px; }
     .texto-entrada h1 { font-size: 2.2em; }
     header h1 { font-size: 2em; }
